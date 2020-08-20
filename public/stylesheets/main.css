@@ -1,0 +1,28 @@
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail {
+  padding: 0;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+}
+
+.delete-form {
+  display: inline;
+}
+
+/* Google Map */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* css to position the images in the index route */
+#index-img {
+  object-fit: cover;
+  height: 200px !important;
+  width: 100%;
+}
