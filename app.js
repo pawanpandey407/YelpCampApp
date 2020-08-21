@@ -17,9 +17,10 @@ var campgroundRoutes = require("./routes/campgrounds"),
          commentRoutes = require("./routes/comments"),
            indexRoutes = require("./routes/index")
  
+           var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_final"
 mongoose
-      .connect(process.env.DATABASEURL, {
-      // .connect("mongodb+srv://pandey_pawan:awesome143@cluster0.gevxx.mongodb.net/yelp_camp_final?retryWrites=true&w=majority", {
+      .connect(url, {
+        
           useNewUrlParser: true,
           useUnifiedTopology: true
       })
