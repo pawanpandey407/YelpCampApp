@@ -18,8 +18,8 @@ var campgroundRoutes = require("./routes/campgrounds"),
            indexRoutes = require("./routes/index")
  
 mongoose
-      // .connect("mongodb://localhost:27017/yelp_camp_final", {
-      .connect("mongodb+srv://pandey_pawan:awesome143@cluster0.gevxx.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+      
+      .connect("mongodb+srv://pandey_pawan:awesome143@cluster0.gevxx.mongodb.net/yelp_camp_final?retryWrites=true&w=majority", {
           useNewUrlParser: true,
           useUnifiedTopology: true
       })
