@@ -1,16 +1,9 @@
-/* .thumbnail img {
+.thumbnail img {
   width: 100%;
   object-fit: cover;
   height: 200px !important;
-} */
-
-@media (min-width: 768px) {
-  .thumbnail img {
-      object-fit: cover;
-      height: 200px;
-      width: 100%;
-  }
 }
+
 
 .thumbnail {
   padding: 0;
