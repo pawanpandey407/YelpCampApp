@@ -21,12 +21,8 @@
 }
 
 /* css to position the images in the index route */
-/* #index-img {
+#index-img {
   object-fit: cover;
   height: 200px !important;
   width: 100%;
-} */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
 }
