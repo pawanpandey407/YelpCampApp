@@ -1,5 +1,7 @@
 .thumbnail img {
   width: 100%;
+  object-fit: cover;
+  height: 200px !important;
 }
 
 .thumbnail {
@@ -20,9 +22,3 @@
   width: 100%;
 }
 
-/* css to position the images in the index route */
-#index-img {
-  object-fit: cover;
-  height: 200px !important;
-  width: 100%;
-}
