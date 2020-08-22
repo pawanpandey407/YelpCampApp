@@ -2,11 +2,11 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
 var middleware = require("../middleware"); // index.js is the first file that is looked up so doesn't need to be included in the path
-var NodeGeocoder = require('node-geocoder');
+var NodeGeocoder = require("node-geocoder");
  
 var options = {
-  provider: 'google',
-  httpAdapter: 'https',
+  provider: "google",
+  httpAdapter: "https",
   apiKey: process.env.GEOCODER_API_KEY,
   formatter: null
 };
@@ -39,7 +39,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
   geocoder.geocode(req.body.location, function (err, data) {
     if (err || !data.length) {
       req.flash("error", "Invalid address");
-      return res.redirect('back');
+      return res.redirect("back");
     }
     var lat = data[0].latitude;
     var lng = data[0].longitude;
@@ -93,12 +93,12 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
   geocoder.geocode(req.body.location, function (err, data) {
     if (err || !data.length) {
       req.flash("error", "Invalid address");
-      return res.redirect('back');
+      return res.redirect("back");
     }
     req.body.campground.lat = data[0].latitude;
     req.body.campground.lng = data[0].longitude;
     req.body.campground.location = data[0].formattedAddress;
-
+    
     Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, campground){
         if(err){
             req.flash("error", err.message);
