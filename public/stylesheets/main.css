@@ -1,7 +1,10 @@
-.thumbnail img {
+
+
+.image {
   width: 100%;
-  /* object-fit: cover;
-  height: 200px !important; */
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 }
 
 .jumbotron {
